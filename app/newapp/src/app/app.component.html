@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style>
+
+.border
+{
+border:2px solid;
+border: width 100px%;
+border-color:black;
+margin: 15%;
+
+
+}
+.border1
+{
+border:2px solid;
+border-color:black;
+margin: 5%;
+margin-top:0%;
+margin-bottom:0%;
+}
+.border2
+{
+border:2px solid;
+border-color:black;
+margin: 5%;
+}
+.container
+{
+background-color: lightgrey;
+margin-left:15%
+border-width:none;
+padding: 10px;
+}
+input[type='radio']:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: lightgreen;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+   
+
+</style>
+<body>
+
+<form ng-app="" name="myForm">
+<div class="border">
+<div style="margin:5%" >
+   <h1></h1>District Name
+    <input class="container"name="myName"style="padding-right: 30px" ng-model="myText"  required>
+    <br><br>
+    Area (sqr m)
+    <input  class="container" style="padding-right: 40px"name="myName" ng-model="myText"  required>
+    <br><br>
+    Population
+    <input  class="container"style="padding-right: 55px" name="myName" ng-model="myText" required>
+    <br><br>
+     <button style="margin-left:55%">Save</button>
+     </div>
+     <br>
+     <div class="border1">
+     <p style="margin-left:5%">Biggest city (area wise)</p>
+     <input style="margin-left:5%"type="radio" id="Chennai" name="city" value="Chennai">
+<label for="Chennai" selected>Chennai</label>
+<input style="margin-left:15%" type="radio" id="coimbatore" name="city" value="Coimbatore">
+<label for="Coimbatore">Coimbatore</label>
+<input style="margin-left:15%"type="radio" id="Salem" name="city" value="Salem">
+<label for="Salem">Salem</label>
+ 
+     </div>
+     <br>
+     <div class="border2">
+     <p style="margin-left:5%">Highly polluted district</p>
+     <input style="margin-left:5%"type="radio" id="Chennai" name="city" value="Chennai">
+<label for="Chennai" checked>Chennai</label>
+<input style="margin-left:15%"type="radio" id="coimbatore" name="city" value="Coimbatore">
+<label for="Coimbatore" selected>Coimbatore</label>
+<input style="margin-left:15%"type="radio" id="Salem" name="city" value="Salem">
+<label for="Salem">Salem</label>
+ 
+     
+     </div>
+     </div>
+</form>
+
+
+</body>
+</html>
